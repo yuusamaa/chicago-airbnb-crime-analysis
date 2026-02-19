@@ -19,6 +19,25 @@ Traditional regression models assume that the relationship between variables is 
 ## 📊 Model Statistics & Console Output
 The terminal outputs during the model execution clearly show the superiority of the spatial approach. The GWR model significantly outperformed the global model, increasing the explanatory power ($R^2$) from **0.278 to 0.441**.
 
+## 📊 Key Findings & Insights
+Based on the statistical outputs and spatial mapping:
+
+* **Model Performance:** The GWR model significantly outperformed the traditional Global Regression model, increasing the R-squared (explanatory power) from **0.278 to 0.441**. This proves that the drivers of crime vary significantly depending on the geography of the neighborhood.
+* **The "Poverty" Effect:** While poverty generally increases crime across the city, the GWR coefficients reveal that its impact is up to **10 times stronger** in specific neighborhoods compared to others. 
+* **The "Education" Paradox:** Interestingly, the lack of a high school diploma showed a positive correlation with crime in some areas, but a *negative* correlation in others. This highlights how complex and localized urban socio-economic relationships can be.
+
+## 🗺️ Visual Insights from the Maps
+
+**1. The Spatial Impact of Poverty**
+The GWR coefficient map reveals a stark divide in Chicago. The deep red areas in the South and West sides indicate a highly positive, aggressive correlation between poverty and crime. In these neighborhoods, poverty is the primary driver of crime. However, in the Northern (blue) districts, the coefficient drops near zero, meaning crime in those areas is driven by entirely different, non-poverty-related dynamics.
+
+![Poverty vs Crime Map](./outputs/poverty_map.png)
+
+**2. Model Accuracy and Residual Anomalies**
+The residual map shows that the model accurately predicts crime rates for the vast majority of the city (indicated by the neutral yellow tones). However, there is a massive positive residual anomaly (dark red) in the city's eastern central core (likely the Downtown/Loop area). The model significantly under-predicted crime here because socioeconomic factors (like residential poverty) fail to account for crimes driven by high commercial activity and tourist density in the city center.
+
+![Residuals Map](./outputs/residuals_map.png)
+
 ```text
 Global Regression Results
 ---------------------------------------------------------------------------  
@@ -46,21 +65,4 @@ Without HS (X4)          10.548    133.506   -154.869    -18.626    200.818
 Hardship Idx (X5)         4.973    118.911   -197.164     26.140    141.891
 ===========================================================================
 
-## 📊 Key Findings & Insights
-Based on the statistical outputs and spatial mapping:
 
-* **Model Performance:** The GWR model significantly outperformed the traditional Global Regression model, increasing the R-squared (explanatory power) from **0.278 to 0.441**. This proves that the drivers of crime vary significantly depending on the geography of the neighborhood.
-* **The "Poverty" Effect:** While poverty generally increases crime across the city, the GWR coefficients reveal that its impact is up to **10 times stronger** in specific neighborhoods compared to others. 
-* **The "Education" Paradox:** Interestingly, the lack of a high school diploma showed a positive correlation with crime in some areas, but a *negative* correlation in others. This highlights how complex and localized urban socio-economic relationships can be.
-
-## 🗺️ Visual Insights from the Maps
-
-**1. The Spatial Impact of Poverty**
-The GWR coefficient map reveals a stark divide in Chicago. The deep red areas in the South and West sides indicate a highly positive, aggressive correlation between poverty and crime. In these neighborhoods, poverty is the primary driver of crime. However, in the Northern (blue) districts, the coefficient drops near zero, meaning crime in those areas is driven by entirely different, non-poverty-related dynamics.
-
-![Poverty vs Crime Map](./outputs/poverty_map.png)
-
-**2. Model Accuracy and Residual Anomalies**
-The residual map shows that the model accurately predicts crime rates for the vast majority of the city (indicated by the neutral yellow tones). However, there is a massive positive residual anomaly (dark red) in the city's eastern central core (likely the Downtown/Loop area). The model significantly under-predicted crime here because socioeconomic factors (like residential poverty) fail to account for crimes driven by high commercial activity and tourist density in the city center.
-
-![Residuals Map](./outputs/residuals_map.png)
