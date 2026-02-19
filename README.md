@@ -16,9 +16,6 @@ Traditional regression models assume that the relationship between variables is 
 * **Dependent Variable:** Number of Crimes (`num_crimes`)
 * **Independent Variables:** Per capita income (X1), poverty rate (X2), unemployment rate (X3), education level/without HS (X4), and hardship index (X5).
 
-## 📊 Model Statistics & Console Output
-The terminal outputs during the model execution clearly show the superiority of the spatial approach. The GWR model significantly outperformed the global model, increasing the explanatory power ($R^2$) from **0.278 to 0.441**.
-
 ## 📊 Key Findings & Insights
 Based on the statistical outputs and spatial mapping:
 
@@ -37,6 +34,9 @@ The GWR coefficient map reveals a stark divide in Chicago. The deep red areas in
 The residual map shows that the model accurately predicts crime rates for the vast majority of the city (indicated by the neutral yellow tones). However, there is a massive positive residual anomaly (dark red) in the city's eastern central core (likely the Downtown/Loop area). The model significantly under-predicted crime here because socioeconomic factors (like residential poverty) fail to account for crimes driven by high commercial activity and tourist density in the city center.
 
 ![Residuals Map](./outputs/residuals_map.png)
+
+## 📊 Model Statistics & Console Output
+The terminal outputs during the model execution clearly show the superiority of the spatial approach. The GWR model significantly outperformed the global model, increasing the explanatory power ($R^2$) from **0.278 to 0.441**.
 
 ```text
 Global Regression Results
