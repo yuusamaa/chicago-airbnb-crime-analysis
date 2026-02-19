@@ -58,9 +58,9 @@ Based on the statistical outputs and spatial mapping:
 **1. The Spatial Impact of Poverty**
 The GWR coefficient map reveals a stark divide in Chicago. The deep red areas in the South and West sides indicate a highly positive, aggressive correlation between poverty and crime. In these neighborhoods, poverty is the primary driver of crime. However, in the Northern (blue) districts, the coefficient drops near zero, meaning crime in those areas is driven by entirely different, non-poverty-related dynamics.
 
-![Poverty vs Crime Map](outputs/poverty_map.png)
+![Poverty vs Crime Map](outputs/poverty_map.png.png)
 
 **2. Model Accuracy and Residual Anomalies**
 The residual map shows that the model accurately predicts crime rates for the vast majority of the city (indicated by the neutral yellow tones). However, there is a massive positive residual anomaly (dark red) in the city's eastern central core (likely the Downtown/Loop area). The model significantly under-predicted crime here because socioeconomic factors (like residential poverty) fail to account for crimes driven by high commercial activity and tourist density in the city center.
 
-![Residuals Map](outputs/residuals_map.png)
+![Residuals Map](outputs/residuals_map.png.png)
